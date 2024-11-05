@@ -1,3 +1,5 @@
+/* src/app/globals.scss */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -5,6 +7,24 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  height: 100%; // Ocupa 100% da altura
+  width: 100%; // Ocupa 100% da largura
+  margin: 0; // Remove margens padrão
+  padding: 0; // Remove preenchimento padrão
+  overflow-x: hidden; // Evita overflow horizontal
+  scroll-behavior: smooth; // Habilita rolagem suave
+  font-family: "Rubik", sans-serif;
+  background: linear-gradient(
+    to right,
+    #004d5b,
+    /* Azul escuro */ #66c2d9,
+    /* Azul médio */ #e0f7fa 70%,
+    /* Azul claro até 70% */ #b2ebf2 90% /* Azul mais claro a partir de 90% */
+  ); // Usa a variável de cor de fundo
+}
+
+#__next {
+  min-height: 100vh; // Garante que a área de renderização ocupe toda a altura
+  display: flex; // Para garantir que o conteúdo dentro se ajuste
+  flex-direction: column; // Permite que os filhos ocupem a altura disponível
 }

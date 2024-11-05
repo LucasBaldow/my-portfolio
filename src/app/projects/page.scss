@@ -1,0 +1,89 @@
+.projects-section {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.projects-section h2 {
+  color: #004d5b; /* Cor do texto para o título */
+  font-size: 1.6rem; /* Tamanho da fonte do título */
+  margin-bottom: 1rem; /* Espaçamento abaixo do título */
+}
+
+.projects-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.project-card {
+  width: 350px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  position: relative; /* Adiciona posicionamento relativo para o cartão */
+  background-color: #ffffff; /* Cor de fundo branca para o cartão */
+  border-radius: 10px; /* Bordas arredondadas para o cartão */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o cartão */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-images {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+  border-radius: 8px; /* Garante que a borda redonda se aplique em ambas as imagens */
+}
+
+.project-image.desktop {
+  position: relative; /* A imagem desktop está em sua posição padrão */
+  z-index: 1; /* Z-index para garantir que a imagem desktop fique abaixo da mobile */
+}
+
+.project-image.mobile {
+  position: absolute; /* A imagem mobile deve ser posicionada absolutamente */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Inicialmente invisível */
+  z-index: 2; /* Coloca a imagem mobile acima da desktop */
+  pointer-events: none; /* Impede a interação do mouse com a imagem mobile */
+  transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+}
+
+.project-card:hover .project-image.mobile {
+  opacity: 1; /* Aparece na sobreposição ao passar o mouse */
+}
+
+.project-card:hover .project-image.desktop {
+  opacity: 0.3; /* A imagem desktop deve ser levemente visível */
+}
+
+.project-content {
+  padding: 1rem; /* Espaçamento interno para o conteúdo do projeto */
+}
+
+.project-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+}
+
+.project-description {
+  font-size: 0.9rem; /* Tamanho da fonte para a descrição */
+  color: #666; /* Cor da descrição */
+  margin-top: 0.5rem; /* Margem acima da descrição */
+  font-family: "Rubik", sans-serif;
+}

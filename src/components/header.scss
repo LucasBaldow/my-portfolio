@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+
+// Define as cores principais e outros padrões
+$header-bg-color: #004d5b; // Azul escuro sólido para o cabeçalho
+$header-text-color: #ffffff; // Branco
+$header-hover-color: #b2ebf2; // Azul muito claro para hover
+$header-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+// Estilos para o header
+.image-container {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.header__icon {
+  font-size: 1.5rem; // Ajuste o valor conforme necessário
+  margin-right: 0.5rem; // Para adicionar um espaço entre o ícone e o texto
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $header-bg-color; // Cor sólida azul escuro
+  box-shadow: $header-shadow;
+
+  &__left {
+    align-items: center; // Alinha verticalmente o ícone e o nome
+  }
+
+  &__title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: $header-text-color; // Branco
+    font-family: "Rubik", sans-serif;
+    text-decoration: none;
+    line-height: 1.2;
+
+    &:hover {
+      color: $header-hover-color; // Azul claro para o título ao passar o mouse
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: "Rubik", sans-serif;
+      font-size: 1rem;
+    }
+
+    &-item {
+      margin-left: 2rem;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $header-text-color; // Branco
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $header-hover-color; // Azul muito claro para os links ao passar o mouse
+      }
+    }
+  }
+}

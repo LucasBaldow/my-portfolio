@@ -1,0 +1,105 @@
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajuste a altura conforme necessário */
+  margin: 0;
+}
+
+.presentation-container {
+  background-color: #ffffff; /* Cor de fundo branca para o container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  width: 60%;
+  padding: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  flex-wrap: wrap;
+
+  .about-me {
+    flex: 1;
+    text-align: left;
+
+    h1 {
+      font-size: 4.5rem;
+      color: #333;
+      font-family: "Rubik", sans-serif;
+      margin-left: 20px;
+      margin-top: 30px;
+      margin-bottom: 0;
+      width: fit-content;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-left: 20px;
+      font-family: "Rubik", sans-serif;
+      max-width: 460px;
+      margin-top: 20px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-family: "Rubik", sans-serif;
+      margin-top: 0;
+      margin-left: 28px;
+      align-content: center;
+      color: #333;
+    }
+  }
+
+  .title-and-icons {
+    display: flex; /* Organiza o título e os ícones em uma linha */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    margin-bottom: 20px;
+
+    h3 {
+      margin-right: 10px; /* Espaçamento entre o texto e os ícones */
+      margin-top: 15px;
+    }
+
+    .icons-container {
+      display: flex;
+      gap: 15px; /* Espaço entre os ícones */
+      font-size: 1.2rem; /* Tamanho dos ícones */
+      margin-left: 40px;
+    }
+  }
+
+  .icon {
+    width: 35px; /* Define a largura dos ícones */
+    height: 35px; /* Define a altura dos ícones */
+    color: #666; /* Altera a cor dos ícones para azul */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave para a cor e transformação */
+
+    &:hover {
+      color: #66c2d9; /* Muda a cor dos ícones ao passar o mouse para o tom azul médio */
+      transform: scale(
+        1.1
+      ); /* Aumenta o tamanho do ícone em 10% ao passar o mouse */
+      filter: drop-shadow(
+        0 0 5px rgba(102, 194, 217, 0.5)
+      ); /* Adiciona uma sombra ao ícone */
+    }
+  }
+
+  .image-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0;
+
+    img {
+      width: 260px; /* Define a largura da imagem */
+      height: 260px; /* Define a altura da imagem para manter um círculo perfeito */
+      border-radius: 50%; /* Torna a imagem circular */
+      object-fit: cover; /* Garante que a imagem preencha o círculo sem distorções */
+    }
+  }
+}

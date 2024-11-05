@@ -1,0 +1,71 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  width: 50%;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-top: 10%;
+  background-color: white; /* Cor de fundo branca */
+
+  .contact-info {
+    flex: 1;
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+      color: #333;
+      font-family: "Rubik", sans-serif;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    .icons-container {
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      gap: 50px; /* Espaço entre os ícones */
+      margin-top: 5%;
+
+      .icon-whatsapp-container,
+      .instagram-container,
+      .email-container {
+        display: flex; /* Garante que o ícone e o texto fiquem lado a lado */
+        align-items: center; /* Alinha verticalmente */
+        gap: 5px; /* Espaço entre ícone e texto */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        transition: color 0.3s ease, transform 0.3s ease; /* Transição para cor e transformação */
+
+        /* Efeito de hover no contêiner para aplicar a todos os elementos */
+        &:hover {
+          color: #66c2d9; /* Muda a cor do texto e ícone ao passar o mouse */
+          transform: scale(1.1); /* Aumenta a div em 10% */
+          filter: drop-shadow(
+            0 0 5px rgba(102, 194, 217, 0.5)
+          ); /* Sombra ao redor da div */
+        }
+
+        a {
+          text-decoration: none; /* Remove o sublinhado do link */
+          color: inherit; /* Mantém a cor do texto padrão */
+          display: flex; /* Alinha o ícone e o texto lado a lado */
+          align-items: center; /* Alinha verticalmente */
+          gap: 5px; /* Espaço entre o ícone e o texto */
+        }
+
+        .icon {
+          width: 35px;
+          height: 35px;
+          color: #666; /* Cor padrão dos ícones */
+          transition: color 0.3s ease, transform 0.3s ease; /* Transição para cor e transformação */
+        }
+
+        /* QR Code também dentro do efeito hover */
+        .qr-code {
+          margin-left: 10px; /* Espaço entre o texto e o QR Code */
+        }
+      }
+    }
+  }
+}
