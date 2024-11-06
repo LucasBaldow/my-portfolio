@@ -48,7 +48,7 @@
       margin-left: 5px;
       max-width: 460px;
       margin-top: 10px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     h3 {
@@ -115,16 +115,18 @@
 /* Media Query para telas menores que 600px */
 @media (max-width: 445px) {
   .presentation-container {
-    width: 83%; /* Ajuste a largura do container para 90% em telas menores */
-    padding: 22px; /* Reduz o padding para dar mais espaço */
+    width: 83%;
+    padding: 22px;
   }
 
   .about-me p {
-    margin-left: 0; /* Remove a margem esquerda */
-    text-align: center; /* Alinha o texto ao centro */
+    margin-left: 0;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: justify;
   }
 
   .about-me h1 {
-    font-size: 3.5rem !important; /* Ajusta o tamanho da fonte do h1 para telas menores */
+    font-size: 3.5rem !important;
   }
 }
