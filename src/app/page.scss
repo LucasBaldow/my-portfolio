@@ -113,15 +113,18 @@
 }
 
 /* Media Query para telas menores que 600px */
-@media (max-width: 600px) {
+@media (max-width: 445px) {
   .presentation-container {
-    width: 82%; /* Ajuste a largura do container para 90% em telas menores */
-    padding: 20px; /* Reduz o padding para dar mais espaço */
+    width: 83%; /* Ajuste a largura do container para 90% em telas menores */
+    padding: 22px; /* Reduz o padding para dar mais espaço */
   }
 
   .about-me p {
-    font-size: 0.8rem; /* Diminui o tamanho da fonte do parágrafo */
     margin-left: 0; /* Remove a margem esquerda */
     text-align: center; /* Alinha o texto ao centro */
+  }
+
+  .about-me h1 {
+    font-size: 3.5rem !important; /* Ajusta o tamanho da fonte do h1 para telas menores */
   }
 }

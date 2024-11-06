@@ -101,3 +101,29 @@ body {
   color: var(--header-hover-color);
   transform: scale(1.1);
 }
+
+@media (max-width: 410px) {
+  .header {
+    padding: 1rem 1.2rem;
+  }
+
+  .header__icon {
+    font-size: 1.3rem; /* Diminuir o tamanho do ícone */
+  }
+
+  .header__title {
+    font-size: 0.8rem; /* Diminuir o tamanho da fonte do título */
+  }
+
+  .header__nav-list {
+    font-size: 0.8rem; /* Diminuir o tamanho da fonte da lista de navegação */
+  }
+
+  .header__nav-item {
+    margin-left: 1.3rem; /* Ajustar o espaçamento entre os itens */
+  }
+
+  .header__nav-link {
+    font-size: 0.8rem; /* Diminuir o tamanho da fonte do link de navegação */
+  }
+}
