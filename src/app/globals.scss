@@ -102,6 +102,11 @@ body {
   transform: scale(1.1);
 }
 
+.header__nav-item--active .header__nav-link {
+  color: var(--header-active-color, #ffffff); /* Cor azul claro */
+  transform: scale(1.15); /* Zoom leve */
+}
+
 @media (max-width: 410px) {
   .header {
     padding: 1rem 1.2rem;
