@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <h1>SOFTWARE DEVELOPER</h1>
           <p>
-            tabalho na CuboLife, uma startup do ramo da saúde. Estou focado em
+            trabalho na CuboLife, uma startup do ramo da saúde. Estou focado em
             desenvolver aplicações que otimizem processos, seja automatizando
             tarefas repetitivas ou criando ferramentas eficientes.
           </p>
