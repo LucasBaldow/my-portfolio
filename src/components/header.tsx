@@ -3,8 +3,6 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons"; // Ícone de programação
 
-import "./header.scss";
-
 const routes: { [key: string]: string } = {
   "Sobre mim": "/about",
   Skills: "/skills",

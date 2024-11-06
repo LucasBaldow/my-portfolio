@@ -5,9 +5,24 @@
 }
 
 .projects-section h2 {
-  color: #004d5b; /* Cor do texto para o título */
-  font-size: 1.6rem; /* Tamanho da fonte do título */
-  margin-bottom: 1rem; /* Espaçamento abaixo do título */
+  color: #004d5b;
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+  margin-top: 1%;
+  opacity: 0; /* Começa invisível */
+  transform: translateX(-30px); /* Começa à esquerda */
+  animation: fadeInSlideRight 1s ease-out forwards; /* Animação de fade-in com deslize da esquerda para a direita */
+
+  @keyframes fadeInSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px); /* Começa à esquerda */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Move para a posição original */
+    }
+  }
 }
 
 .projects-container {
@@ -15,7 +30,7 @@
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 5%;
+  margin-top: 0;
 }
 
 .project-card {
@@ -76,14 +91,12 @@
 
 .project-title {
   margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  font-family: "Rubik", sans-serif;
 }
 
 .project-description {
-  font-size: 0.9rem; /* Tamanho da fonte para a descrição */
+  font-size: 1rem; /* Tamanho da fonte para a descrição */
   color: #666; /* Cor da descrição */
   margin-top: 0.5rem; /* Margem acima da descrição */
-  font-family: "Rubik", sans-serif;
 }

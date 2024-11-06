@@ -12,10 +12,9 @@ const About: React.FC = () => {
               Sou Técnico em Mecânica e estudante de Engenharia Mecânica, com
               paixão por tecnologia e programação. Trabalhei com startups em um
               programa do SEBRAE, onde adquiri experiência no dia a dia do
-              empreendedorismo e em soluções práticas. Além da área
-              profissional, sou fã de praia, trilhas e tudo que envolve a
-              natureza. Estou animado com a chance de ajudar sua empresa a
-              crescer! 😊
+              empreendedorismo e em soluções práticas. Além do profissional, sou
+              fã de praia, trilhas e tudo que envolve a natureza. Estou animado
+              com a chance de ajudar sua empresa a crescer! 😊
             </p>
           </div>
         </section>

@@ -1,9 +1,7 @@
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajuste a altura conforme necessário */
   margin: 0;
 }
 
@@ -12,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px auto;
+  margin: 4% auto;
   width: 60%;
   padding: 50px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -21,30 +19,40 @@
 
   .about-me {
     flex: 1;
-    text-align: left;
 
     h1 {
-      font-size: 4.5rem;
+      font-size: 4.2rem;
       color: #333;
-      font-family: "Rubik", sans-serif;
-      margin-left: 20px;
-      margin-top: 30px;
+      margin-left: 8px;
+      margin-top: -10px;
       margin-bottom: 0;
-      width: fit-content;
+      opacity: 0; /* Começa invisível */
+      transform: translateX(-30px); /* Começa à esquerda */
+      animation: fadeInSlideRight 1s ease-out forwards; /* Animação de fade-in com deslize da esquerda para a direita */
+
+      @keyframes fadeInSlideRight {
+        0% {
+          opacity: 0;
+          transform: translateX(-30px); /* Começa à esquerda */
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0); /* Move para a posição original */
+        }
+      }
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #666;
-      margin-left: 20px;
-      font-family: "Rubik", sans-serif;
+      margin-left: 5px;
       max-width: 460px;
-      margin-top: 20px;
+      margin-top: 10px;
+      font-weight: 500;
     }
 
     h3 {
       font-size: 1rem;
-      font-family: "Rubik", sans-serif;
       margin-top: 0;
       margin-left: 28px;
       align-content: center;
@@ -71,8 +79,8 @@
   }
 
   .icon {
-    width: 35px; /* Define a largura dos ícones */
-    height: 35px; /* Define a altura dos ícones */
+    width: 38px; /* Define a largura dos ícones */
+    height: 38px; /* Define a altura dos ícones */
     color: #666; /* Altera a cor dos ícones para azul */
     transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave para a cor e transformação */
 
@@ -101,5 +109,19 @@
       border-radius: 50%; /* Torna a imagem circular */
       object-fit: cover; /* Garante que a imagem preencha o círculo sem distorções */
     }
+  }
+}
+
+/* Media Query para telas menores que 600px */
+@media (max-width: 600px) {
+  .presentation-container {
+    width: 82%; /* Ajuste a largura do container para 90% em telas menores */
+    padding: 20px; /* Reduz o padding para dar mais espaço */
+  }
+
+  .about-me p {
+    font-size: 0.8rem; /* Diminui o tamanho da fonte do parágrafo */
+    margin-left: 0; /* Remove a margem esquerda */
+    text-align: center; /* Alinha o texto ao centro */
   }
 }

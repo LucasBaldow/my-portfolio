@@ -1,30 +1,103 @@
 /* src/app/globals.scss */
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+/* Definindo variáveis de cores */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-bg-color: #004d5b; /* Azul escuro */
+  --header-text-color: #ffffff; /* Branco */
+  --header-hover-color: #b2ebf2; /* Azul claro */
+  --header-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Estilos globais para o HTML e body */
 html,
 body {
-  height: 100%; // Ocupa 100% da altura
-  width: 100%; // Ocupa 100% da largura
-  margin: 0; // Remove margens padrão
-  padding: 0; // Remove preenchimento padrão
-  overflow-x: hidden; // Evita overflow horizontal
-  scroll-behavior: smooth; // Habilita rolagem suave
-  font-family: "Rubik", sans-serif;
+  height: 100%; /* Ocupa 100% da altura */
+  width: 100%; /* Ocupa 100% da largura */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+  overflow-x: hidden; /* Evita overflow horizontal */
+  scroll-behavior: smooth; /* Habilita rolagem suave */
   background: linear-gradient(
     to right,
-    #004d5b,
-    /* Azul escuro */ #66c2d9,
-    /* Azul médio */ #e0f7fa 70%,
-    /* Azul claro até 70% */ #b2ebf2 90% /* Azul mais claro a partir de 90% */
-  ); // Usa a variável de cor de fundo
+    var(--header-bg-color),
+    #66c2d9,
+    #e0f7fa 70%,
+    var(--header-hover-color) 90%
+  ); /* Gradiente de fundo */
 }
 
 #__next {
-  min-height: 100vh; // Garante que a área de renderização ocupe toda a altura
-  display: flex; // Para garantir que o conteúdo dentro se ajuste
-  flex-direction: column; // Permite que os filhos ocupem a altura disponível
+  min-height: 100vh; /* Garante que a área de renderização ocupe toda a altura */
+  display: flex; /* Para garantir que o conteúdo dentro se ajuste */
+  flex-direction: column; /* Permite que os filhos ocupem a altura disponível */
+}
+
+/* Estilo global para o Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  background-color: var(--header-bg-color); /* Cor de fundo */
+  box-shadow: var(--header-shadow); /* Sombra */
+}
+
+.header__icon {
+  font-size: 1.5rem; /* Tamanho fixo do ícone */
+  margin-right: 0.3rem; /* Espaço entre o ícone e o texto */
+}
+
+.header__title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--header-text-color);
+  text-decoration: none;
+  line-height: 1.2;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+}
+
+.header__title:hover {
+  color: var(--header-hover-color);
+  transform: scale(1.3);
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.header__nav-item {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.header__nav-item:hover {
+  transform: scale(1.1);
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: var(--header-text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: var(--header-hover-color);
+  transform: scale(1.1);
 }

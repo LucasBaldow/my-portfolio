@@ -9,7 +9,7 @@
 
 .skills-category {
   margin-bottom: 2px;
-  width: 100%;
+  width: 80%;
   max-width: 800px;
 }
 
@@ -17,7 +17,20 @@
   font-size: 17px;
   margin-bottom: 2px;
   color: #ffffff;
-  font-family: "Rubik", sans-serif;
+  opacity: 0; /* Começa invisível */
+  transform: translateX(-20px); /* Começa à esquerda */
+  animation: fadeInSlideRight 1s ease-out forwards; /* Animação de fade-in com deslize da esquerda para a direita */
+
+  @keyframes fadeInSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px); /* Começa à esquerda */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Move para a posição original */
+    }
+  }
 }
 
 .skills-grid {
@@ -59,5 +72,10 @@
   margin-top: 8px;
   color: #004d5b;
   text-align: center;
-  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 670px) {
+  .skills-section {
+    height: auto; /* Remove a altura fixa para permitir rolagem completa */
+  }
 }

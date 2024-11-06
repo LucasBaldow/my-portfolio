@@ -8,7 +8,8 @@ const projects = [
     desktopImage: "/hunterdesktop.png",
     mobileImage: "/huntermobile.png",
     link: "https://www.hunterhub.com.br/",
-    description: "Extensão para navegador utilizando next.js",
+    description:
+      "Extensão de navegador para monitoramento de preços e análise de dados, desenvolvida com Next JS",
   },
   {
     id: 2,
@@ -17,7 +18,7 @@ const projects = [
     mobileImage: "/armormobile.png",
     link: "https://www.armor-bot.com/",
     description:
-      "Aplicativo desktop de automação utilizando React e TypeScript",
+      "Aplicativo desktop de automação, utilizando React e TypeScript",
   },
 ];
 
@@ -25,7 +26,7 @@ const Projects: React.FC = () => {
   return (
     <main>
       <section className="projects-section">
-        <h2>Meus Projetos</h2>
+        <h2 className="projects-title">Meus Projetos</h2>
         <div className="projects-container">
           {projects.map((project) => (
             <a

@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faGithub,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "./page.scss";
@@ -25,14 +21,22 @@ export default function Contact() {
               >
                 <FontAwesomeIcon className="icon" icon={faWhatsapp} />
               </a>
-              <div className="qr-code">
-                <Image
-                  src="/qr-code.png"
-                  alt="QR Code do WhatsApp"
-                  width={100}
-                  height={100}
-                />
-              </div>
+              {/* Tornando o QR Code clicável */}
+              <a
+                href="https://wa.me/5527997293744" // Mesma URL do WhatsApp
+                target="_blank"
+                rel="noopener noreferrer"
+                className="qr-link"
+              >
+                <div className="qr-code">
+                  <Image
+                    src="/qr-code.png"
+                    alt="QR Code do WhatsApp"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              </a>
             </div>
 
             {/* Link para o Instagram */}
