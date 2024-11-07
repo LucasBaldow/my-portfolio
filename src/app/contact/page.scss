@@ -87,7 +87,11 @@
 
     .icons-container {
       flex-direction: column;
-      margin-left: 40px;
+      margin-left: 35px;
     }
+  }
+
+  @media (max-width: 460px) {
+    margin-top: 20%; /* Aumenta o espaçamento superior para empurrar o container para baixo */
   }
 }
