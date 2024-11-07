@@ -115,8 +115,9 @@
 /* Media Query para telas menores que 600px */
 @media (max-width: 445px) {
   .presentation-container {
-    width: 83%;
+    width: 75%;
     padding: 22px;
+    margin-top: 20%;
   }
 
   .about-me p {

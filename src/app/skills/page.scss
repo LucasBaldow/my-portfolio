@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 85vh; /* Altura da viewport */
   overflow: hidden; /* Remove rolagem */
 }
 
@@ -50,7 +49,7 @@
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 15px;
+  padding: 5px;
   border-radius: 6px;
   transition: transform 0.2s ease-in-out;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -77,5 +76,6 @@
 @media (max-width: 670px) {
   .skills-section {
     height: auto; /* Remove a altura fixa para permitir rolagem completa */
+    margin-left: -20px;
   }
 }
